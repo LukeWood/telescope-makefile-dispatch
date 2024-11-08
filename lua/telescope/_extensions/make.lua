@@ -3,7 +3,7 @@ local finders      = require("telescope.finders")
 local conf         = require("telescope.config").values
 local action_state = require("telescope.actions.state")
 local actions      = require("telescope.actions")
-local config       = require("telescope-makefile.config")
+local config       = require("telescope-makefile-dispatch.config")
 local makefile_dir
 local function get_targets()
   local make = config.make_bin

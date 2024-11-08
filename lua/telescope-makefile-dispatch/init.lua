@@ -1,4 +1,4 @@
-local config = require("telescope-makefile.config")
+local config = require("telescope-makefile-dispatch.config")
 local M = {}
 
 -- Configures the plugin with the settings provided
