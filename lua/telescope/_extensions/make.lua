@@ -3,7 +3,6 @@ local finders      = require("telescope.finders")
 local conf         = require("telescope.config").values
 local action_state = require("telescope.actions.state")
 local actions      = require("telescope.actions")
-local Terminal     = require("toggleterm.terminal").Terminal
 local config       = require("telescope-makefile.config")
 local makefile_dir
 local function get_targets()
@@ -53,8 +52,8 @@ end
 
 local function run_target(cmd)
   local target = cmd[1] == config.default_target and "" or cmd[1]
-  local cmd = config.make_bin .. " -C " .. makefile_dir .. " " .. target
-  vim.cmd(":Dispatch! " .. cmd .. "<cr>")
+  local command = config.make_bin .. " -C " .. makefile_dir .. " " .. target
+  vim.cmd(":Dispatch! " .. command)
 end
 
 local telescope_makefile = function(opts)
